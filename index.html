@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div>
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li>
+      <h3>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}<small> {{ post.date | date: "%b %-d, %Y" }}</small></a>
+      </h3>
+      <div class="post-content-truncate">
+        {% if post.content contains "<!-- more -->" %}
+          {{ post.content | split:"<!-- more -->" | first % }}
+        {% else %}
+          {{ post.content | strip_html | truncatewords:100 }}
+        {% endif %}
+      </div>
+      <a href="{{ post.url | prepend: site.baseurl }}">Read more</a><br>
+      <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread">Comments</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,61 @@
+<footer>
+  <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <ul class="contact-list">
+          <address>
+            <strong>{{ site.title }}</strong><br>
+          </address>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            <a href="https://github.com/{{ site.github_username }}">
+              <i class="fa fa-github"></i>
+              <span class="username">{{ site.github_username }}</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.twitter_username %}
+          <li>
+            <a href="https://twitter.com/{{ site.twitter_username }}">
+              <i class="fa fa-twitter"></i>
+              <span class="username">{{ site.twitter_username }}</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.youtube_username %}
+          <li>
+            <a href="https://www.youtube.com/user/{{ site.youtube_username }}">
+              <i class="fa fa-youtube"></i>
+              <span class="username">{{ site.youtube_username }}</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.instagram_username %}
+          <li>
+            <a href="http://instagram.com/{{ site.instagram_username }}">
+              <i class="fa fa-instagram"></i>
+              <span class="username">{{ site.instagram_username }}</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.facebook_username %}
+          <li>
+            <a href="http://facebook.com/{{ site.facebook_username }}">
+              <i class="fa fa-facebook"></i>
+              <span class="username">{{ site.facebook_username }}</span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <p>{{ site.description }}<br>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
