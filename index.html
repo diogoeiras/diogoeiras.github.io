@@ -1,23 +1,18 @@
 ---
 layout: default
 ---
-
-<div>
-  <ul>
-    {% for post in site.posts %}
-    <li>
-      <h3>
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}<small> {{ post.date | date: "%b %-d, %Y" }}</small></a>
-      </h3>
-      <div class="post-content-truncate">
-        {% if post.content contains "<!-- more -->" %}
-          {{ post.content | split:"<!-- more -->" | first % }}
-        {% else %}
-          {{ post.content | strip_html | truncatewords:100 }}
-        {% endif %}
-      </div>
-      <a href="{{ post.url | prepend: site.baseurl }}">Read more</a>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+  {% for post in site.posts %}
+  <div>
+    <h3>
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}<small> {{ post.date | date: "%b %-d, %Y" }}</small></a>
+    </h3>
+    <div class="post-content-truncate" style="text-align: justify;text-justify: inter-word;">
+      {% if post.content contains "<!-- more -->" %}
+        {{ post.content | split:"<!-- more -->" | first % }}
+      {% else %}
+        {{ post.content | strip_html | truncatewords:100 }}
+      {% endif %}
+    </div>
+    <a href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+  </div>
+  {% endfor %}
