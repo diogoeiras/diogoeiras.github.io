@@ -8,9 +8,15 @@ layout: default
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
 
-  <article class="post-content">
+  <article class="post-content" style="text-align: justify;text-justify: inter-word;">
     {{ content }}
   </article>
+
+  <div class="row">
+    <div class="col-md-12 col-xs-12">
+      {% include pub.html %}
+    </div>
+  </div>
 
   {% include disqus.html %}
     
