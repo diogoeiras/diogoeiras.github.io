@@ -16,8 +16,7 @@ layout: default
           {{ post.content | strip_html | truncatewords:100 }}
         {% endif %}
       </div>
-      <a href="{{ post.url | prepend: site.baseurl }}">Read more</a><br>
-      <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread">Comments</a>
+      <a href="{{ post.url | prepend: site.baseurl }}">Read more</a>
     </li>
     {% endfor %}
   </ul>
