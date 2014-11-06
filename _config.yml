@@ -1,6 +1,5 @@
 # Site settings
 title: Diogo Eiras
-email: eiras@outlook.com
 description: > 
   Personal blog with some source code snippets and themes about technology
 baseurl: "" # the subpath of your site, e.g. /blog/
