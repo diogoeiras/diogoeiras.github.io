@@ -1,9 +1,15 @@
 ---
 layout: default
 ---
-<div>
-  <h1>{{ page.title }}</h1>
-  <article>
-    {{ content }}
-  </article>
+<div class="panel panel-default">
+	<div class="panel-heading">
+      <h1 class="panel-title">{{ page.title }}</h1>
+    </div>
+	<div class="panel-body">
+		<div style="text-align: justify;text-justify: inter-word;">
+			<div>
+			    {{ content }}
+			</div>
+		</div>
+	</div>
 </div>

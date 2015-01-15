@@ -2,17 +2,20 @@
 layout: default
 ---
   {% for post in site.posts %}
-  <div>
-    <h3>
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}<small> {{ post.date | date: "%b %-d, %Y" }}</small></a>
-    </h3>
-    <div class="post-content-truncate" style="text-align: justify;text-justify: inter-word;">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}<small> {{ post.date | date: "%b %-d, %Y" }}</small></a></h3>
+    </div>
+    <div class="panel-body">
+      <div class="post-content-truncate" style="text-align: justify;text-justify: inter-word;">
       {% if post.content contains "<!-- more -->" %}
         {{ post.content | split:"<!-- more -->" | first % }}
       {% else %}
         {{ post.content | strip_html | truncatewords:100 }}
       {% endif %}
     </div>
-    <a href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+    <hr>
+    <a class="pull-right" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+    </div>
   </div>
   {% endfor %}
