@@ -1,0 +1,29 @@
+body{
+    background-image: url("../assets/porto.jpg");
+    background-size: cover;
+}
+
+/* Fix for images with cover template */
+img {
+    position: relative;
+}
+
+#profile {
+    width: 25%;
+    height: auto;
+}
+
+.text-box {
+    background: rgb(54, 25, 25);
+    background: rgba(54, 25, 25, .7);
+    border: 1px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.text-box .cover-heading {
+    padding-top: 0;
+    margin-top: 0;
+}

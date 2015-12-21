@@ -1,1 +1,0 @@
-# Sobre a programação
