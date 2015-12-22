@@ -1,5 +1,8 @@
-body{
-    background-image: url("../assets/porto.jpg");
+html,body{
+    background: url("../assets/porto.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -26,4 +29,16 @@ img {
 .text-box .cover-heading {
     padding-top: 0;
     margin-top: 0;
+}
+
+#social-list {
+    width: 75%;
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    display: inline-flex;
+}
+
+#social-list li {
+    margin: 0 auto;
 }
