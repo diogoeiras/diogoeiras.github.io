@@ -1,23 +1,165 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="home">
+<head>
+    <title>Diogo Eiras</title>
 
-  <h1 class="page-heading">Posts</h1>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <!-- Bootstrap CSS include -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+    <!-- Google Font include -->
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet">
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <!-- DEVICON Font include -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css">
+    
+    <link href="css/style.css" rel="stylesheet">
+</head>
 
-</div>
+<body class="default-primary-color text-primary-color">
+    <div class="container-fluid wrapper">
+        <div class="row min-wrapper">
+            <div class="col-12 col-sm-5 col-md-4 col-lg-3 col-xl-3" id="lateral">
+                <h1 class="text-center">Diogo Eiras</h1>
+                <img src="./images/profile.jpg" alt="" class="img-fluid rounded-circle mx-auto d-block" id="profile-image">
+                <p class="tertiary-text-color text-center"><i>Anyone can hold the helm when the sea is calm</i></P>
+                <!-- 
+                <nav class="text-center">
+                    <a class="nav-link active" href="/"><span>Home</span></a>
+                    <a class="nav-link" href="/cv"><span>Curriculum Vitae</span></a>
+                    <a class="nav-link" href="/blog"><span>Blog</span></a>
+                    <a class="nav-link" href="/projects"><span>Projects</span></a>
+                </nav>
+                -->
+                <ul class="list-inline text-center secondary-text-color" id="social-list">
+                    <li class="list-inline-item"><a href="https://github.com/diogoeiras"><i class="fa fa-github fa-2x"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/diogoeiras/"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.facebook.com/diogoeiras"><i class="fa fa-facebook fa-2x"></i></a></li>
+                    <li class="list-inline-item"><a href="https://twitter.com/diogoeiras"><i class="fa fa-twitter fa-2x"></i></a></li>
+                    <li class="list-inline-item"><a href="mailto:geral@diogoeiras.xyz"><i class="fa fa-envelope fa-2x"></i></a></li>
+                </ul>
+                <div class="text-center hidden-sm-up secondary-text-color"><a href="#main"><i class="fa fa-arrow-circle-o-down fa-2x" aria-hidden="true"></i></a></div>
+            </div>
+            <div class="col light-primary-color primary-text-color text-justify divider-shadow" id="main">
+                <h2>About Me</h2>
+                <hr>
+                <div class="row">
+                    <div class="col-12 col-lg-7">
+                        <p>
+                            I'm Diogo Eiras, currently a student of the <a href="https://sigarra.up.pt/feup/en/CUR_GERAL.CUR_VIEW?pv_origem=CUR&pv_tipo_cur_sigla=MI&pv_curso_id=742">Informatics and Computing Engineering Master course</a> at <abbr title="Faculty of Engineering University of Porto"><a href="https://sigarra.up.pt/feup/en/">FEUP</a></abbr>.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <dl class="row">
+                            <dt class="col-4"><i class="fa fa-user"></i> Name</dt>
+                            <dd class="col-8">Filipe Diogo Soares Eiras</dd>
+                            <dt class="col-4"><i class="fa fa-calendar"></i> Age</dt>
+                            <dd class="col-8">23 years</dd>
+                            <dt class="col-4"><i class="fa fa-map"></i> Location</dt>
+                            <dd class="col-8">Monção, Portugal</dd>
+                        </dl>
+                    </div>
+                </div>
+                <h2>Education</h2>
+                <hr>
+                <div class="row section-item">
+                    <div class="col-4 align-self-center">
+                        <a href="http://aemoncao.com/"><img class="img-fluid mx-auto d-block" src="./images/aem.png"></a>
+                    </div>
+                    <div class="col-8">
+                        <h4><a href="http://aemoncao.com/">Monção Secondary School</a></h4>
+                        <p><i>Secondary Education on Sciences and Technologies</i><br>
+                        <span><i class="fa fa-clock-o"></i> 2008 - 2011</span></p>
+                    </div>
+                </div>
+                <div class="row section-item">
+                    <div class="col-4 align-self-center">
+                        <a href="https://sigarra.up.pt/feup/en/"><img class="img-fluid mx-auto d-block" src="./images/feup.png"></a>
+                    </div>
+                    <div class="col-8">
+                        <h4><a href="https://sigarra.up.pt/feup/en/">Faculty of Engineering of University of Porto</a></h4>
+                        <p><i>Integrated Master in Informatics and Computing Engineering</i><br>
+                        <span><i class="fa fa-clock-o"></i> 2011 - current</span></p>
+                    </div>
+                </div>
+                <h2>Skills</h2>
+                <hr>
+                <div class="row section-item">
+                    <div class="col">
+                        <h4>Languages & Frameworks & Environments</h4>
+                        <ul class="list-inline skill-list tertiary-text-color">
+                            <li class="list-inline-item"><i class="devicon-java-plain"></i> Java</li>
+                            <li class="list-inline-item"><i class="devicon-cplusplus-plain"></i> C++</li>
+                            <li class="list-inline-item"><i class="devicon-css3-plain"></i> CSS</li>
+                            <li class="list-inline-item"><i class="devicon-html5-plain"></i> HTML</li>
+                            <li class="list-inline-item"><i class="devicon-php-plain"></i> PHP</li>
+                            <li class="list-inline-item"><i class="devicon-nodejs-plain"></i> Node.js</li>
+                            <li class="list-inline-item"><i class="devicon-laravel-plain"></i> Laravel</li>
+                            <li class="list-inline-item"><i class="devicon-javascript-plain"></i> Javascript</li>
+                            <li class="list-inline-item"><i class="devicon-bootstrap-plain"></i> Bootstrap</li>
+                        </ul>
+                        <h4>Databases</h4>
+                        <ul class="list-inline skill-list tertiary-text-color">
+                            <li class="list-inline-item"><i class="devicon-mysql-plain"></i> MySQL</li>
+                            <li class="list-inline-item"><i class="devicon-mongodb-plain"></i> MongoDB</li>
+                            <li class="list-inline-item"><i class="devicon-postgresql-plain"></i> PostgreSQL</li>
+                        </ul>
+                        <h4>Operating Systems</h4>
+                        <ul class="list-inline skill-list tertiary-text-color">
+                            <li class="list-inline-item"><i class="devicon-windows8-plain"></i> Windows</li>
+                            <li class="list-inline-item"><i class="devicon-linux-plain"></i> Linux</li>
+                        </ul>
+                        <h4>Others</h4>
+                        <ul class="list-inline skill-list tertiary-text-color">
+                            <li class="list-inline-item"><i class="devicon-apache-plain"></i> Apache</li>
+                            <li class="list-inline-item"><i class="devicon-heroku-plain"></i> Heroku</li>
+                            <li class="list-inline-item"><i class="devicon-travis-plain"></i> Travis</li>
+                            <li class="list-inline-item"><i class="devicon-ssh-plain"></i> SSH</li>
+                        </ul>
+                    </div>
+                </div>
+                <h2>Hobbies & Other Activities</h2>
+                <hr>
+                <div class="row section-item">
+                    <div class="col-4 align-self-center">
+                        <a href="https://nuieee.fe.up.pt/"><img class="img-fluid mx-auto d-block" src="./images/nuieee.png"></a>
+                    </div>
+                    <div class="col-8">
+                        <h4><a href="https://nuieee.fe.up.pt/">IEEE <abbr title="University of Porto">UP</abbr> Student Branch</a></h4>
+                        <p><i>Volunteer and Executive Committee (Treasury)</i><br>
+                        Organisation of workshops and events<br>
+                        <span><i class="fa fa-clock-o"></i> 2014 - current</span></p>
+                    </div>
+                </div>
+                <h2>Projects</h2>
+                <hr>
+                <div class="row section-item">
+                    <div class="col-4 align-self-center">
+                        <a href="https://nuieee.fe.up.pt/"><img class="img-fluid mx-auto d-block" src="./images/nuieee-website.png"></a>
+                    </div>
+                    <div class="col-8">
+                        <h4><a href="https://nuieee.fe.up.pt/">IEEE <abbr title="University of Porto">UP</abbr> Student Branch Website</a></h4>
+                        <p>Website made with Jekyll. Automatic deploy done by Travis.<br>
+                        <span><i class="fa fa-clock-o"></i> 2016 - current</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependecies -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/17b1d24870.js"></script>
+</body>
+
+</html>
